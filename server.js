@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.use(cors(corsOptions))
+app.options("*", cors(corsOptions));
 //middleware for allowing all origins
 //middleware for reading JSON data
 app.use(express.json())
