@@ -9,6 +9,7 @@ import notFound from './middleware/notFoundHandler.js'
 import { corsOptions } from './config/corsOptions.js'
 import { verifyJWT } from './middleware/verifyJWT.js'
 import userExists from './middleware/userExists.js'
+const PORT = process.env.PORT || 3000
 const app = express()
 
 app.use(cors(corsOptions))
@@ -28,4 +29,4 @@ app.use(errorHandler)
 
 
 
-app.listen(3000,()=>console.log('Server running on PORT 3000'));
+app.listen(PORT,()=>console.log('Server running on PORT 3000'));
